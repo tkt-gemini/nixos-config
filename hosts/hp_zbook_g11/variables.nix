@@ -2,12 +2,16 @@
 
 {
   username = "gemini";
-  fullname = "Khanh-Toan Tran"; 
-  hostname = "hp_zbook_g11";
+  fullName = "Khanh-Toan Tran"; 
+  hostName = "hp_zbook_g11";
   system = "x86_64-linux";
-  state-version = "25.11";
-  git-name = "tkt-gemini";
-  git-email = "tkt310505@gmail.com";
+  stateVersion = "25.11";
+  git = {
+    name = "tkt-gemini";
+    email = "tkt310505@gmail.com";
+    editor = "nvim";
+    defaultBranch = "main";
+  };
   terminal = "ghostty";
   editor = "nvim";
   browser = "microsoft-edge";
