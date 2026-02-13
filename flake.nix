@@ -39,14 +39,14 @@
           };
         in nixpkgs.lib.nixosSystem {
           inherit system;
-          specialArgs = { inherit inputs vars unstable; };
+          specialArgs = { inherit self inputs vars unstable; };
           modules = [
             ./hosts/${hostName}
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = { inherit inputs vars unstable; };
+              home-manager.extraSpecialArgs = { inherit self inputs vars unstable; };
               home-manager.users.${vars.username} = import ./home; 
             }
           ];

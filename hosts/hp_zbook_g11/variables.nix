@@ -12,9 +12,6 @@
     editor = "nvim";
     defaultBranch = "main";
   };
-  terminal = "ghostty";
-  editor = "nvim";
-  browser = "microsoft-edge";
-  timezone = "Asia/Ho_Chi_Minh";
-  locale = "en_US.UTF-8";
+  timeZone = "Asia/Bangkok";
+  defaultLocale = "en_US.UTF-8";
 }

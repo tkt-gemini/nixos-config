@@ -1,18 +1,16 @@
 # ./home/default.nix
 
-{ config, pkgs, pkgs-unstable, inputs, vars, ... }:
+{ self, config, pkgs, unstable, inputs, vars, ... }:
   {
     imports = [
-      ./gui/hyprland/default.nix
-      ./gui/shell/default.nix
-      ./terminal/neovim/default.nix
-      ./terminal/shell/zsh.nix
-      ./workflow/ai-tools.nix
+      ${self}/home/gui
+      ${self}/home/terminal
+      ${self}/home/workflow
     ];
 
     home.username = vars.username;
     home.homeDirectory = "/home/${vars.username}";
-    home.stateVersion = vars.state-version;
+    home.stateVersion = vars.stateVersion;
     home.packages = [
       pkgs-unstable.ghostty
       pkgs-unstable.pixi
