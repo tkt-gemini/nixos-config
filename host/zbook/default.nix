@@ -8,5 +8,6 @@
 {
   imports = [
     ./hardware.nix
+    ../../module/os
   ];
 }
